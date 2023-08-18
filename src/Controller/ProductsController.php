@@ -28,18 +28,15 @@ class ProductsController extends AbstractController
         
         // 1. Deserialize json data into EnquiryDTO
         $lowestPriceEnquiry = $serializer->deserialize($request->getContent(), LowestPriceEnquiry::class, 'json');
-        dd($lowestPriceEnquiry);
         // 2. Pass the Enquiry into promotions filter
         //   -find the appropriate promotion
         // 3. Return the modified Enquiry
-                  
-        return new JsonResponse([
-            'quantity' => 5,
-            'request_location' => 'DK',
-            'voucher_code' => 'OU812',
-            'request_date' => '2023-08-16',
-            'product_id' => $id
-        ], 200);
+        $lowestPriceEnquiry->setDiscountPrice(50);
+        $lowestPriceEnquiry->setPrice(100);
+        $lowestPriceEnquiry->setPromotionId(3);
+        $lowestPriceEnquiry->setPromotionName('Black Friday');
+        
+        return new JsonResponse($lowestPriceEnquiry);
     }
 
 
