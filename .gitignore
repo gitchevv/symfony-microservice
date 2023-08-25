@@ -81,3 +81,4 @@ mysql
 /web/js/
 
 # End of https://www.toptal.com/developers/gitignore/api/symfony
+composer.json
