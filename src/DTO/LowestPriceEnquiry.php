@@ -19,7 +19,7 @@ class LowestPriceEnquiry implements PromotionEnquiryInterface
     private ?int $promotionId;
     private ?string $promotionName;
     
-
+	
 
 
 	/**
@@ -134,9 +134,9 @@ class LowestPriceEnquiry implements PromotionEnquiryInterface
 		return $this;
 	}
 
-	public function jsonSerialize(){
-		return get_object_vars($this);
-	}
+	// public function jsonSerialize(){
+	// 	return get_object_vars($this);
+	// }
 
 	/**
 	 * @return 

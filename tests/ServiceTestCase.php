@@ -3,6 +3,8 @@
 namespace App\Tests;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use App\Filters\LowestPriceFilter;
+
 
 class ServiceTestCase extends WebTestCase
 {

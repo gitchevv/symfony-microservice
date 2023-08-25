@@ -19,7 +19,7 @@ class ProductsController extends AbstractController
 
     public function __construct(private ProductRepository $repository, private EntityManager $entityManager) 
     {
-
+        
     }
 
     #[Route('/products/{id}/lowest-price', name: 'lowest-price', methods: 'POST')]
