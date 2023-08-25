@@ -51,11 +51,11 @@ class ProductsController extends AbstractController
         // 2. Pass the Enquiry into promotions filter
         $modifiedEnquiry = $promotionsFilter->apply($lowestPriceEnquiry, ...$promotion);
 
-        
+
         // 3. Return the modified Enquiry
         $responseContent = $serializer->serialize($modifiedEnquiry, 'json');
 
-        return new Response($responseContent);
+        return new Response($responseContent, 200, ['Content-Type' => 'application/json']);
     }
 
 }

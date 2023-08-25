@@ -2,6 +2,7 @@
 
 namespace App\Filters;
 
+use App\Entity\Promotion;
 use App\DTO\PromotionEnquiryInterface;
 
 interface PromotionFilterInterface
